@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+    .section-min-height{
+      min-height: calc(100vh - 68px);
+  }
+
+  .toggle-btn{
+      @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[360deg]
+  }
+}
+ 
+:root {
+  /* --background: #ffffff; */
+  --background: url('/chestnut2.svg'), linear-gradient(25deg, rgba(199, 199, 236, 0.9) 28%, rgba(125, 197, 252, 0.9) 67%, rgba(234, 240, 247, 0.9) 100%);
+  --foreground: #171717;
+  --2rem: 2rem;
+  --3rem: 3rem;
+  --4rem: 4rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --background: #0a0a0a; */
+    --background:  url('/chestnut2_d.svg'), linear-gradient(25deg, rgb(21, 20, 36) 28%, rgb(5, 35, 58) 67%,
+     rgba(21, 42, 88,1) 100%);
+ 
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  /* background: var(--background); */
+  
+  background-image: var(--background);
+  background-size: 150px 150px, cover; /* Сітка має розмір 300x300 пікселів */
+  background-repeat: repeat, no-repeat; /* SVG повторюється, а градієнт ні */
+  background-position: center, center; /* Центрування для градієнта */
+  background-attachment: fixed; /* Фон закріплений при скролі */
+  
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+h1{
+  font-size: var(--3rem);
+  
+}
+
