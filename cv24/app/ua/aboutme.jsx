@@ -6,7 +6,7 @@ export default function Aboutme() {
       // widescreen:section-min-height tallscreen:section-min-height
     >
       <article className="sm:w-1/2">
-      <h1>Hi I'm Pasha</h1>
+      <h1>Hi I&apos;m Pasha</h1>
       <h2>Frontend Developer & Applied Mathematics PhD</h2>
       <p>Creating impactful web experiences with precision and style.</p>  
       </article>
