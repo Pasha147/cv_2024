@@ -1,13 +1,31 @@
 
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Header() {
   const [burMenu, setBurMenu] = useState(true);
+  const wrapperRef = useRef(null);
+  useEffect(() => {
+    // Alert if clicked on outside of element
+    function handleClickOutside(event) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+           setBurMenu(false);
+      }
+    }
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+
   return (
     <header className="fixed w-[100%] top-0 z-10">
       <section className="text-right items-center max-w-4xl mx-auto p-2 ">
         <nav
+        ref={wrapperRef}
           className={` ${
             burMenu
               ? `absolute w-[80%] bg-[#185486f0] flex flex-col [&>a]:text-right origin-top  animate-open-menu
