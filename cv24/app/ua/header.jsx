@@ -1,15 +1,14 @@
-
-
 import { useState, useEffect, useRef } from "react";
 
 export default function Header() {
   const [burMenu, setBurMenu] = useState(true);
   const wrapperRef = useRef(null);
+
   useEffect(() => {
     // Alert if clicked on outside of element
     function handleClickOutside(event) {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-           setBurMenu(false);
+        setBurMenu(false);
       }
     }
     // Bind the event listener
@@ -20,12 +19,16 @@ export default function Header() {
     };
   }, []);
 
-
   return (
     <header className="fixed w-[100%] top-0 z-10">
-      <section className="text-right items-center max-w-4xl mx-auto p-2 ">
-        <nav
+      <section
         ref={wrapperRef}
+        className="text-right items-center max-w-4xl mx-auto p-2 "
+      >
+        <nav
+        onClick={() => {
+          setBurMenu(!burMenu);
+        }}
           className={` ${
             burMenu
               ? `absolute w-[80%] bg-[#185486f0] flex flex-col [&>a]:text-right origin-top  animate-open-menu
@@ -35,8 +38,8 @@ export default function Header() {
           }
                 sm:inline-block sm:[&>a]:text-center m-0-1 [&>a]:px-1 [&>a]:border-r-2 [&>a]:border-slate-600 [&>a]:inline-block md:[&>a]:min-w-24 [&>a]:opacity-70 [&>a:hover]:opacity-100 [&>a:hover]:[text-shadow:_3px_4px_7px_rgba(255,255,255,0.77)]`}
         >
-          <a href="#aboutme">Home</a>
-          <a href="#skils">Skils</a>
+          <a  href="#aboutme">Home</a>
+          <a  href="#skils">Skils</a>
           <a href="#education">Education</a>
           <a href="#experience">Work experience</a>
           <a href="#projects">Projects</a>
@@ -45,6 +48,7 @@ export default function Header() {
           </a>
         </nav>
         <button
+        
           onClick={() => {
             setBurMenu(!burMenu);
           }}
