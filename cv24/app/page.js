@@ -72,7 +72,7 @@ export default function Home() {
     <>
       <Header />
       <ColorMenu colorMenu={colorMenu} />
-      <main className="max-w-4xl mx-auto [&>section]:pt-10  [&>div]:min-h-[100vh] [&>section]:bg-resume-section [&>section]:bg-gradient-cover-grid [&>section]:bg-no-repeat-grid [&>section]:bg-center-grid dark:[&>section]:bg-resume-section_d">
+      <main className="max-w-4xl mx-auto [&>div>section]:pt-10  [&>div>section]:min-h-[100vh] [&>div>section]:bg-resume-section [&>div>section]:bg-gradient-cover-grid [&>div>section]:bg-no-repeat-grid [&>div>section]:bg-center-grid dark:[&>div>section]:bg-resume-section_d">
         <div id={`artId${0}`} ref={(element) => (itemEls.current[0] = element)}>
           <Aboutme />
         </div>
