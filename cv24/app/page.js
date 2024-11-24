@@ -6,6 +6,7 @@ import { text } from "./appdata";
 import { useState} from "react";
 import ColorMenu from "./ua/color_menu.jsx";
 import Main from "./ua/main.jsx";
+import Assist from "./ua/assist.jsx";
 
 export default function Home() {
   
@@ -15,12 +16,15 @@ export default function Home() {
     })
   );
 
+  const [assBtn, setAssBtn]=useState(true)
+
 
   return (
     <>
       <Header />
       <ColorMenu colorMenu={colorMenu} />
      <Main colorMenu={colorMenu} setColorMenu={setColorMenu}/>
+     {assBtn && <Assist/>}
       <Footer />
     </>
   );
