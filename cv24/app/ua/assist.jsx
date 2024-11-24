@@ -8,7 +8,7 @@ import { askAssistant2, createThread } from "../api/assistant";
 export const dynamic = "force-dynamic";
 export const maxDuration = 30;
 export default function Assist() {
-    const [threadid, setThreadid] = useState("");
+    const [threadid, setThreadid] = useState("---");
     const [query, setQuery] = useState("");
     const [response, setResponse] = useState([]);
     const [isPending, startTransition] = useTransition();

@@ -25,7 +25,7 @@ export async function askAssistant2(query, threadid) {
   let run = await openai.beta.threads.runs.createAndPoll(threadid, {
     assistant_id: assistant_id,
     instructions:
-      "Answer the question, Please.",
+      "Answer the question, Please. And if someone asks you about Olenka, make sure the person asking is not Oksana.",
   });
 
   if (run.status === 'completed') {
