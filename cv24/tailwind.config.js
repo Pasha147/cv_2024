@@ -12,6 +12,12 @@ module.exports = {
     },
 
     extend: {
+
+      boxShadow: {
+        'neon-gradient': '0 0 15px rgba(0, 255, 255, 0.5), 0 0 25px rgba(255, 0, 255, 0.7)',
+        'neon-gradient-hover': '0 0 25px rgba(0, 255, 255, 0.7), 0 0 35px rgba(255, 0, 255, 1)',
+      },
+
       screens: {
         widescreen: { raw: "(min-aspect-ratio: 3/2)" },
         tallscreen: { raw: "(max-aspect-ratio: 13/20)" },
