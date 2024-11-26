@@ -34,7 +34,7 @@ export async function askAssistant2(query, threadid) {
     // );
     const messages = await openai.beta.threads.messages.list(run.thread_id, {
       limit: 10,
-      reverse: true // якщо доступний, цей параметр дозволить отримати останнє повідомлення першим
+     reverse: false // якщо доступний, цей параметр дозволить отримати останнє повідомлення першим
     });
     for (const message of messages.data.reverse()) {
       // console.log(`${message.role} > ${message.content[0].text.value}`);

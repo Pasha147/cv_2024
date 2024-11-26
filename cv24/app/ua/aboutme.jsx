@@ -1,12 +1,10 @@
-import { useState } from "react";
+
 import Assist from "./assist.jsx";
 
 
 export default function Aboutme() {
 
-  const [assBtn, setAssBtn]=useState(true)
-
-  return (
+    return (
     <section
       id="aboutme"
       className="relative flex flex-col-reverse justify-center sm:flex-row items-center gap-8 p-6"
@@ -29,15 +27,8 @@ export default function Aboutme() {
         }}
         className="w-56"
       />
- {assBtn && <Assist/>}
-      <button onClick={()=>setAssBtn(!assBtn)} className="absolute right-4 bottom-4 flex items-center justify-center w-24 h-24 bg-black rounded-full shadow-neon-gradient transition-shadow duration-300 hover:shadow-neon-gradient-hover">
-        <img
-          src="assist.webp"
-          alt="Assistant Icon"
-          className="w-4/5 h-4/5 rounded-full"
-          
-        />
-      </button>
+  <Assist/>
+     
     </section>
   );
 }
