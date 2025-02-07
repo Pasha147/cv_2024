@@ -49,6 +49,7 @@ export default function Assist() {
   return (
     <>
       {assBtn && (
+        
         <div className="absolute max-h-[1/2] w-full left-0 bottom-0 tallscreen:bottom-8">
           {response.length > 0 && (
             <div className="bg-[#faebd7] text-[#6d6565] bg-opacity-97 mb-2 border-2 rounded-lg m-2 p-2">
