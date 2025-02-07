@@ -49,8 +49,12 @@ export default function Assist() {
   return (
     <>
       {assBtn && (
+<<<<<<< HEAD
         
         <div className="absolute max-h-[1/2] w-full left-0 bottom-0 tallscreen:bottom-8">
+=======
+        <div className="absolute max-h-[1/2] w-full left-0 bottom-0 border-2 rounded-lg p-2 bg-slate-500 bg-opacity-90">
+>>>>>>> ec27f0f6b76474f8737196978e2235ba495434e8
           {response.length > 0 && (
             <div className="bg-[#faebd7] text-[#6d6565] bg-opacity-97 mb-2 border-2 rounded-lg m-2 p-2">
               <p>{`thread_id: ${threadid}`}</p>
