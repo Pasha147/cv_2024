@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 export default function Header() {
-  const [burMenu, setBurMenu] = useState(true);
+  const [burMenu, setBurMenu] = useState(false);
   const wrapperRef = useRef(null);
 
   useEffect(() => {

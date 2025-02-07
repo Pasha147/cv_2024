@@ -7,13 +7,13 @@ export default function Aboutme() {
     return (
     <section
       id="aboutme"
-      className="relative flex flex-col-reverse justify-center sm:flex-row items-center gap-8 p-6"
+      className="relative flex flex-col-reverse justify-center md:flex-row items-center gap-8 p-6"
       // widescreen:section-min-height tallscreen:section-min-height
     >
-      <article className="sm:w-1/2">
-        <h1>Hi I&apos;m Pasha</h1>
-        <h2>Frontend Developer & Applied Mathematics PhD</h2>
-        <p>Creating impactful web experiences with precision and style.</p>
+      <article className="md:w-1/2">
+        <h1 className="text-center">Hi I&apos;m Pasha</h1>
+        <h2 className="text-center mb-2">Frontend Developer</h2>
+        <p className="text-justify">Experienced front-end developer with knowledge of back-end technologies. Additionally, I have a strong background in scientific research and data analysis, as well as proficiency in mathematical software.</p>
       </article>
 
       <img
