@@ -26,20 +26,20 @@ export default function Header() {
         className="text-right items-center max-w-4xl mx-auto p-2 "
       >
         <nav
-        onClick={() => {
-          setBurMenu(!burMenu);
-        }}
+          onClick={() => {
+            setBurMenu(!burMenu);
+          }}
           className={` ${
             burMenu
-              ? `absolute w-[80%] bg-[#185486f0] flex flex-col [&>a]:text-right origin-top  animate-open-menu
+              ? `absolute w-[80%] bg-[#185486f0] flex flex-col [&>a]:text-right origin-top  animate-open-menu [&>a]:my-4 rounded-md
 
-                sm:relative sm:w-auto sm:h-auto sm:[&>a]:text-center sm:animate-none sm:bg-transparent`
+                sm:relative sm:w-auto sm:h-auto sm:[&>a]:text-center  sm:animate-none sm:bg-transparent`
               : `hidden `
           }
                 sm:inline-block sm:[&>a]:text-center m-0-1 [&>a]:px-1 [&>a]:border-r-2 [&>a]:border-slate-600 [&>a]:inline-block md:[&>a]:min-w-24 [&>a]:opacity-70 [&>a:hover]:opacity-100 [&>a:hover]:[text-shadow:_3px_4px_7px_rgba(255,255,255,0.77)]`}
         >
-          <a  href="#aboutme">Home</a>
-          <a  href="#skils">Skils</a>
+          <a href="#aboutme">Home</a>
+          <a href="#skils">Skils</a>
           <a href="#education">Education</a>
           <a href="#experience">Work experience</a>
           <a href="#projects">Projects</a>
@@ -48,7 +48,6 @@ export default function Header() {
           </a>
         </nav>
         <button
-        
           onClick={() => {
             setBurMenu(!burMenu);
           }}
