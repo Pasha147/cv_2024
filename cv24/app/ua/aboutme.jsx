@@ -7,11 +7,11 @@ export default function Aboutme() {
     return (
     <section
       id="aboutme"
-      className="relative flex flex-col-reverse justify-center md:flex-row items-center gap-8 p-6"
+      className="relative flex flex-col-reverse justify-end md:flex-row md:justify-around items-center gap-2 p-6"
       // widescreen:section-min-height tallscreen:section-min-height
     >
       <article className="md:w-1/2">
-        <h1 className="text-center">Hi I&apos;m Pasha!!!</h1>
+        <h1 className="text-center">Hi I&apos;m Pasha</h1>
         <h2 className="text-center mb-2">Frontend Developer</h2>
         <p className="text-justify">Experienced front-end developer with knowledge of back-end technologies. Additionally, I have a strong background in scientific research and data analysis, as well as proficiency in mathematical software.</p>
       </article>
@@ -25,7 +25,7 @@ export default function Aboutme() {
           WebkitMaskRepeat: "no-repeat",
           maskRepeat: "no-repeat",
         }}
-        className="w-56"
+        className="w-48 mt-6 md:self-start"
       />
   <Assist/>
      

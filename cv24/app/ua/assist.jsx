@@ -49,13 +49,18 @@ export default function Assist() {
   return (
     <>
       {assBtn && (
-        <div className="absolute max-h-[1/2] w-full left-0 bottom-0 tallscreen:bottom-8">
+        <div className="absolute max-h-[1/2] w-full left-0 bottom-6 tallscreen:bottom-8">
           {response.length > 0 && (
-            <div className="bg-[#faebd7] text-[#6d6565] bg-opacity-97 mb-2 border-2 rounded-lg m-2 p-2">
+            <div className="bg-[#faebd7] text-[#6d6565] bg-opacity-97 mb-2 border-2 rounded-lg m-2 p-2 max-h-[60vh] overflow-y-auto">
               <p>{`thread_id: ${threadid}`}</p>
               <ul className="flex flex-col-reverse ">
                 {response.map((item, n) => (
-                  <li key={`answer_${n}`}>{`${item.role}: ${item.text}`}</li>
+                  <li key={`answer_${n}`}>
+                    <span className="font-bold text-xl">{`${item.role}:`}</span>
+                    <span>{`${item.text}`}</span>
+
+                    {/* {`${item.role}: ${item.text}`} */}
+                    </li>
                 ))}
               </ul>
             </div>
@@ -80,7 +85,7 @@ export default function Assist() {
               text-[#6d6565] block prom-width"
               type="text"
               minLength="5"
-              rows="3"
+              rows="2"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Enter your question"
@@ -102,7 +107,7 @@ export default function Assist() {
       )}
       <button
         onClick={() => setAssBtn(!assBtn)}
-        className="absolute  right-4 bottom-4 tallscreen:bottom-8 flex items-center justify-center w-16 h-16 rounded-full shadow-neon-gradient transition-shadow duration-300 hover:shadow-neon-gradient-hover"
+        className="absolute  right-4 bottom-10 tallscreen:bottom-8 flex items-center justify-center w-16 h-16 rounded-full shadow-neon-gradient transition-shadow duration-300 hover:shadow-neon-gradient-hover"
       >
         <img
           src="assist.jpg"
